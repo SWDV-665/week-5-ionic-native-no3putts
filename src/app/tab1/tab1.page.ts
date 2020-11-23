@@ -53,7 +53,7 @@ export class Tab1Page {
     let subject = "Needed grocery item"
 
     this.socialSharing.canShareViaEmail().then(()=>{
-      this.socialSharing.shareViaEmail(message, subject, ['ihate3putts@hotmail.com']).then(() => {
+      this.socialSharing.share(message, subject, "www/"+item.imgUrl).then(() => {
         console.log("Shared via email");
       }).catch((error) => {
         console.log("Share via email failed: ",error);
